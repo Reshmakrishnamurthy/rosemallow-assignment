@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosemallow 3D Data Visualization</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Sign In -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Three.js CDN imports -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- LOGIN PAGE -->
+  <main id="login-page">
+    <section class="login-box">
+      <h1>Welcome Back</h1>
+      <p>Sign in with Google to continue</p>
+      <div id="google-signin-button"></div>
+      <p id="login-error" class="error-text"></p>
+    </section>
+  </main>
+
+  <!-- 3D VISUALIZATION PAGE -->
+  <main id="app" class="hidden">
+    <div id="info">Rosemallow 3D Data Visualization</div>
+    <div id="container"></div>
+
+    <div id="legend">
+      <span class="legend-item"><span class="box red"></span> &lt; $100K</span>
+      <span class="legend-item"><span class="box orange"></span> &gt; $100K</span>
+      <span class="legend-item"><span class="box green"></span> &gt; $200K</span>
+    </div>
+
+    <div id="menu">
+      <button id="table">TABLE</button>
+      <button id="sphere">SPHERE</button>
+      <button id="helix">HELIX</button>
+      <button id="grid">GRID</button>
+    </div>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
